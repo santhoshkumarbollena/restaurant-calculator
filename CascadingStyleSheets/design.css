@@ -1,0 +1,14 @@
+#InitialHeader{
+    text-align: center;
+}
+.TableSpacing{
+    border-spacing:0 12px;
+    
+   
+}
+.ModifiedButton{
+    background-color: white;
+    border:none;
+    color:rgb(7, 138, 219);
+    font-size : 20px; 
+}

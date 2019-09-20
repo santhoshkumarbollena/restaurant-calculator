@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
-        <title>Calculator</title>
+        <title>Restaurant Calculator</title>
     </head>
-   <script>
-   document.getElementById("calculate").addEventListener('click',claculate)
-function claculate(){
-    let costInString=document.getElementById("cost");
-    let tipInString=document.getElementById("rate");
-
-    let cost=parseFloat(costInString)
-    let tip=parseFloat(tipInString)
-    console.log(cost+tip+5.50)
-    document.getElementById("grandtotal").innerHTML=(cost+tip+5.50)
-
-}
-   </script>
+    
     <body>
-        <h1>Maitre D</h1>
-        <p>Total</p>
-        <input type="text" id="cost">
-        <br>
-        <p>Tip:</p>
-        <p id="tiprate"></p>
-        <p>Rate:</p>
-        <input type="text" id="rate">
-        <br>
-        <p>Tax:</p>
-        <p>$5.50</p>
-        <p>Grand Total:</p>
-        <p id="grandtotal"></p>
-        <button id="calculate">Calculate</button>
+            <link rel="stylesheet" type="text/css" href="CascadingStyleSheets/design.css">
+            <h1 id="InitialHeader"> Maitre D</h1>
+        <main>
+       <br>
+     
+       <table align="center" class="TableSpacing">
+        <tr>
+            <td>
+                <label >Total:    </label>
+                <input id="cost" type="text"   placeholder="0.00"  >
+            </td>
+    
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>
+                <label>Tip: </label><span id="TipValue">$0.00</span>
+            </td>
+            <td>
+                <label >Rate: </label>
+                <input id="rate" type="text"  placeholder="0.00" >
+            </td>
+        </tr>
+
+        <tr>
+           <td>
+               <label>Tax: </label><span id="TaxValue">$0.00</span>
+           </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Grand Total: </label><span id="TotalValue">$0.00</span>
+            </td>
+        </tr>
+        
+       </table> 
+       
+        </main>
+        <div>
+        <section align="center">
+                <button id="calculate" class="ModifiedButton">Calculate</button>
+        </section>
+        </div>
+       <script src="JavaScript/calculate.js"></script>
+    
     </body>
 </html>
