@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+   <script>
+   document.getElementById("calculate").addEventListener('click',claculate)
+function claculate(){
+    let costInString=document.getElementById("cost");
+    let tipInString=document.getElementById("rate");
+
+    let cost=parseFloat(costInString)
+    let tip=parseFloat(tipInString)
+    console.log(cost+tip+5.50)
+    document.getElementById("grandtotal").innerHTML=(cost+tip+5.50)
+
+}
+   </script>
+    <body>
+        <h1>Maitre D</h1>
+        <p>Total</p>
+        <input type="text" id="cost">
+        <br>
+        <p>Tip:</p>
+        <p id="tiprate"></p>
+        <p>Rate:</p>
+        <input type="text" id="rate">
+        <br>
+        <p>Tax:</p>
+        <p>$5.50</p>
+        <p>Grand Total:</p>
+        <p id="grandtotal"></p>
+        <button id="calculate">Calculate</button>
+    </body>
+</html>
